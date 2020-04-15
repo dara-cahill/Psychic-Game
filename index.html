@@ -17,19 +17,25 @@
 
 
     <script type="text/javascript">
-var wins, losses, guessesLeft, guessesSoFar;
+var randomLetter, wins, losses, guessesLeft, guessesSoFar;
 
 function init (){
-    console.log ("Initializing Game", wins, losses,guessesLeft,guessesSoFar)
     wins=0;
     losses=0;
     guessesLeft=10;
     guessesSoFar=[];
+    randomLetter=getNewRandomLetter()
     console.log ("Initializing Game", wins, losses,guessesLeft,guessesSoFar)
     updateWinValueOnUI(wins);
     updateLossesValueOnUI(losses);
     updateGuessesLeftValueOnUI(guessesLeft);
     updateguessesSoFarValueOnUI(guessesSoFar);
+
+}
+
+
+function getNewRandomLetter (){
+ return 'A'
 }
 
 // Use this function to update the win value on UI
