@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Psychic Game</title>
+</head>
+<body>
+ <div>
+     <h1>The Psychic Game</h1>
+     <h4>Guess what letter I'm thinking of.</h4>
+     <p>Wins: <span id="w"></span></p>
+     <p>Losses: <span id="l"></span></p>
+     <p>Guesses Left: <span id="gL"></span></p>
+     <p>Your guesses so far: <span id="gSF"></span></p>
+ </div>
+
+
+    <script type="text/javascript">
+var wins, losses, guessesLeft, guessesSoFar;
+
+function init (){
+    console.log ("Initializing Game", wins, losses,guessesLeft,guessesSoFar)
+    wins=0;
+    losses=0;
+    guessesLeft=10;
+    guessesSoFar=[];
+    console.log ("Initializing Game", wins, losses,guessesLeft,guessesSoFar)
+    updateWinValueOnUI(wins);
+}
+
+// Use this function to update the win value on UI
+// Note: This does not calculate the win value, simply updates the UI with the argument passed to it.
+function updateWinValueOnUI (newWinValue){
+    document.getElementById("w").innerHTML = newWinValue;
+}
+init();
+
+    </script>
+</body>
+</html>
