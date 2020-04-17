@@ -17,10 +17,11 @@ function init (){
 }
 
 function pickRandomLetter(){
-    randomLetter = ["A","B","C","D","E","F","G","H","I","J","K","L","M","N","O","P","Q","R","S","T","U","V","W","X","Y","Z","a","b","c","d","e","f","g","h","i","j","k","l","m","n","o","p","q","r","s","t","u","v","w","x","y","z"];
-    var a = randomLetter[pickRandomLetter]
-    return a;
-
+    
+    randomLetter = ["A","B","C","D","E","F","G","H","I","J","K","L","M","N","O","P","Q","R","S","T","U","V","W","X","Y","Z"];
+    var randomNumber = Math.floor(Math.random() * randomLetter.length -1);
+    console.log(randomLetter[randomNumber]);
+    return randomLetter[randomNumber];
 }
 
 document.onkeyup = function (event){
