@@ -20,7 +20,7 @@ function pickRandomLetter(){
     return 'A'; //TODO Comeback and do Math.Floor thing...
 }
 
-document.onkeyup = function(event){
+document.onkeyup = function (event){
     console.log(event.key)
     
     if (event.key === randomLetter){
@@ -35,28 +35,9 @@ document.onkeyup = function(event){
         losses++;
         init();
     }
-    
-    
-
-    // yes or no
-    
-    // if no
-    // compair guesses so far to how many guesses are left
-    // if guesses left =1
-    // then game Over
-    // losses ++
-    // Restart game
-
-    // if guesses left >1
-    // decrease guesses left
-    // log letter typed into guesses so far (into array)
 
 }
 
-
-
-// Use this function to update the win value on UI
-// Note: This does not calculate the win value, simply updates the UI with the argument passed to it.
 function updateWinValueOnUI (newWinValue){
     document.getElementById("w").innerHTML = newWinValue;
 }
