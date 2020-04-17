@@ -3,9 +3,11 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
     <title>Psychic Game</title>
 </head>
 <body>
+
  <div>
      <h1>The Psychic Game</h1>
      <h4>Guess what letter I'm thinking of.</h4>
@@ -14,49 +16,6 @@
      <p>Guesses Left: <span id="gL"></span></p>
      <p>Your guesses so far: <span id="gSF"></span></p>
  </div>
-
-
-    <script type="text/javascript">
-var randomLetter, wins, losses, guessesLeft, guessesSoFar;
-
-function init (){
-    wins=0;
-    losses=0;
-    guessesLeft=10;
-    guessesSoFar=[];
-    randomLetter=getNewRandomLetter()
-    console.log ("Initializing Game", wins, losses,guessesLeft,guessesSoFar)
-    updateWinValueOnUI(wins);
-    updateLossesValueOnUI(losses);
-    updateGuessesLeftValueOnUI(guessesLeft);
-    updateguessesSoFarValueOnUI(guessesSoFar);
-
-}
-
-
-function getNewRandomLetter (){
- return 'A'
-}
-
-// Use this function to update the win value on UI
-// Note: This does not calculate the win value, simply updates the UI with the argument passed to it.
-function updateWinValueOnUI (newWinValue){
-    document.getElementById("w").innerHTML = newWinValue;
-}
-
-function updateLossesValueOnUI (newLossesValue){
-    document.getElementById("l").innerHTML = newLossesValue;
-}
-
-function updateGuessesLeftValueOnUI (newGuessesLeftValue){
-    document.getElementById("gL").innerHTML = newGuessesLeftValue;
-}
-
-function updateguessesSoFarValueOnUI (newguessesSoFarValue){
-    document.getElementById("gSF").innerHTML = newguessesSoFarValue;
-}
-init();
-
-    </script>
+<script src="./assets/javascript/game.js"></script>
 </body>
 </html>
