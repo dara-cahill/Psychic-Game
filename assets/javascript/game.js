@@ -22,10 +22,14 @@ function pickRandomLetter(){
 
 document.onkeyup = function(event){
     console.log(event.key)
-
-    // Decide if its the same letter
+    
+    if (event.key === randomLetter){
+        wins++; 
+        init();
+    }
+    
+   
     // yes or no
-    // if yes wins ++, pick new random letter, reset guesses back to 10, clear guesses so far
     
     // if no
     // compair guesses so far to how many guesses are left
