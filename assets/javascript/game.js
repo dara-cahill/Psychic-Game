@@ -1,9 +1,10 @@
 
 var randomLetter, wins, losses, guessesLeft, guessesSoFar;
-
-function init (){
+    
     wins=0;
     losses=0;
+
+function init (){
     guessesLeft=10;
     guessesSoFar=[];
     console.log ("Initializing Game", wins, losses,guessesLeft,guessesSoFar)
@@ -37,12 +38,6 @@ document.onkeyup = function(event){
     // decrease guesses left
     // log letter typed into guesses so far (into array)
 
-
-
-
-    var computerChoice = 
-    if 
-
 }
 
 
@@ -66,6 +61,3 @@ function updateguessesSoFarValueOnUI (newguessesSoFarValue){
 }
 init();
 
-// 1.List of letters for the computer to pull from 
-// 2.Generate a random number based on list of letters length
-// 3.
