@@ -26,9 +26,18 @@ document.onkeyup = function(event){
     if (event.key === randomLetter){
         wins++; 
         init();
+    } else if (guessesSoFar.length<10){
+        guessesLeft= 10 - guessesSoFar.push (event.key);
+        console.log (guessesLeft,guessesSoFar)
+        updateGuessesLeftValueOnUI(guessesLeft)
+        updateguessesSoFarValueOnUI(guessesSoFar)
+    } else {
+        losses++;
+        init();
     }
     
-   
+    
+
     // yes or no
     
     // if no
